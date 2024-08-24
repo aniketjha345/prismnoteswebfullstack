@@ -1,0 +1,322 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e3f2fd; /* Light blue background for body */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    transition: background-color 0.3s ease-in-out;
+}
+
+header {
+    background-color: #fff; /* White background for the header */
+    color: #4a148c; /* Dark purple text color */
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Ensuring header text is prominent */
+header h1, header h2 {
+    color: #4a148c; /* Dark purple text color */
+    margin: 0; /* Remove default margin */
+    font-weight: 700; /* Bolder font weight */
+}
+
+/* Heading Styles */
+h1, h2 {
+    text-align: center;
+    color: #4a148c; /* Dark purple color for headings */
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Categories List Styles */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+ul li {
+    background: #fff; /* White background for list items */
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: calc(33.333% - 30px);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s, border-color 0.3s;
+    text-align: center;
+    cursor: pointer;
+}
+
+ul li:hover {
+    background-color: #bbdefb; /* Light blue background on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+    border-color: #4a148c; /* Dark purple border color on hover */
+}
+
+ul li a {
+    color: #4a148c; /* Dark purple color for links */
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+    color: #1e88e5; /* Light blue color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    ul li {
+        width: calc(25% - 30px); /* Adjust width for medium screens */
+    }
+}
+
+@media (max-width: 992px) {
+    ul li {
+        width: calc(33.333% - 30px); /* Adjust width for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    ul li {
+        width: calc(50% - 20px); /* Adjust width for tablets */
+    }
+
+    header {
+        padding: 15px 0;
+    }
+
+    .container {
+        width: 90%;
+        padding: 10px 0;
+    }
+
+    h1, h2 {
+        font-size: 22px; /* Adjust font size for headings on tablets */
+    }
+
+    input[type="text"], 
+    input[type="password"], 
+    select, 
+    input[type="file"] {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .login-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .error {
+        font-size: 14px;
+    }
+
+    .back-link {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    ul li {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+    }
+
+    header {
+        padding: 15px 0;
+    }
+
+    .container {
+        width: 90%;
+        padding: 10px 0;
+    }
+
+    h1, h2 {
+        font-size: 18px; /* Further adjust font size for small screens */
+    }
+
+    input[type="text"], 
+    input[type="password"], 
+    select, 
+    input[type="file"] {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .login-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .error {
+        font-size: 14px;
+    }
+
+    .back-link {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+}
+
+/* Admin Link */
+.admin-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #4a148c; /* Dark purple color for admin link */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.admin-link:hover {
+    text-decoration: underline;
+    color: #1e88e5; /* Light blue color on hover */
+}
+
+/* Login Container */
+.login-container {
+    width: 50%;
+    margin: 50px auto;
+    padding: 30px;
+    background: #fff; /* White background for login container */
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-container h1 {
+    margin-bottom: 20px;
+    color: #4a148c; /* Dark purple color for login header */
+    font-weight: 600;
+}
+
+input[type="text"], 
+input[type="password"], 
+select, 
+input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input[type="text"]:focus, 
+input[type="password"]:focus, 
+select:focus, 
+input[type="file"]:focus {
+    border-color: #4a148c; /* Dark purple border color on focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5); /* Light blue shadow on focus */
+}
+
+button {
+    padding: 12px;
+    background: #4a148c; /* Dark purple background for button */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background: #6a1b9a; /* Slightly lighter purple on hover */
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+    background-color: #3e0e66; /* Darker purple on click */
+}
+
+/* Error Message */
+.error {
+    color: #d32f2f; /* Red color for error message */
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+
+/* Back Link */
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #1e88e5; /* Light blue color for back link */
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+    color: #1565c0; /* Slightly darker blue on hover */
+    transform: translateX(-2px);
+}

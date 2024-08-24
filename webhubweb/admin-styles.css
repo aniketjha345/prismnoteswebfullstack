@@ -1,0 +1,821 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* General Styles for Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 0px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease;
+    z-index: 1000; /* Ensure the sidebar is on top */
+}
+
+.sidebar h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #ecf0f1;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 1.1em;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+/* Collapsed Sidebar Styles */
+.sidebar.collapsed {
+    width: 80px;
+}
+
+.sidebar.collapsed ul li a {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.sidebar.collapsed h2 {
+    display: none;
+}
+
+
+/* Admin Panel Styles */
+.admin-panel {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.admin-panel:hover {
+    transform: scale(1.02);
+}
+
+h1 {
+    color: #333;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #555;
+    border-bottom: 2px solid #4a90e2;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    text-align: left;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="file"], select {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    width: 100%;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, input[type="file"]:focus, select:focus {
+    border-color: #4a90e2;
+    outline: none;
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.5);
+}
+
+button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #357abd;
+    transform: translateY(-2px);
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #4a90e2;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+td {
+    transition: background-color 0.3s;
+}
+
+td:hover {
+    background-color: #f1f1f1;
+}
+
+td a {
+    color: #4a90e2;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+td a:hover {
+    text-decoration: underline;
+    color: #357abd;
+}
+
+/* Document List */
+.document-list {
+    margin: 30px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.document-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.document-list li:hover {
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.document-list li span {
+    color: #333;
+    font-weight: 500;
+    flex-grow: 1;
+    margin-right: 15px;
+}
+
+.document-list li a.download-button {
+    text-decoration: none;
+    padding: 12px 20px;
+    background-color: #4a90e2;
+    color: #fff;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.document-list li a.download-button:hover {
+    background-color: #357ab8;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .admin-panel {
+        width: 85%;
+    }
+}
+
+@media (max-width: 992px) {
+    .admin-panel {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    input[type="text"], input[type="file"], select {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    .document-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px;
+    }
+
+    .document-list li span {
+        margin-bottom: 10px;
+    }
+
+    .document-list li a.download-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-panel {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    input[type="text"], input[type="file"], select {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    .document-list li {
+        padding: 10px;
+    }
+
+    .modal-content {
+        max-width: 90%;
+        margin: 50px auto;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .admin-panel {
+        width: 100%;
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    input[type="text"], input[type="file"], select {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 8px 14px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    .document-list li {
+        padding: 10px;
+    }
+
+    .modal-content {
+        max-width: 90%;
+        margin: 50px auto;
+        padding: 15px;
+    }
+}
+
+/* Back Link */
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #4a90e2;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+    color: #357ab8;
+}
+
+/* Modal Styles */
+.modal-content {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 25px;
+    max-width: 500px;
+    margin: 100px auto;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.modal-content:hover {
+    transform: scale(1.02);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #4a90e2;
+}
+
+/* Modal Background */
+#editFileModal, #editCategoryModal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    transition: opacity 0.3s;
+}
+
+/* Form Layout in Modal */
+#editFileForm, #editCategoryForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#editFileForm input[type="text"], #editFileForm input[type="file"], 
+#editCategoryForm input[type="text"] {
+    margin-bottom: 12px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#editFileForm input[type="text"]:focus, #editFileForm input[type="file"]:focus, 
+#editCategoryForm input[type="text"]:focus {
+    border-color: #4a90e2;
+    outline: none;
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.5);
+}
+
+
+/* Content Styles */
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+/* Admin Panel Styles */
+.admin-panel {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.admin-panel:hover {
+    transform: scale(1.02);
+}
+
+h1 {
+    color: #333;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #555;
+    border-bottom: 2px solid #4a90e2;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    text-align: left;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="file"], select {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    width: 100%;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, input[type="file"]:focus, select:focus {
+    border-color: #4a90e2;
+    outline: none;
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.5);
+}
+
+button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #357abd;
+    transform: translateY(-2px);
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #4a90e2;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+td {
+    transition: background-color 0.3s;
+}
+
+td:hover {
+    background-color: #f1f1f1;
+}
+
+td a {
+    color: #4a90e2;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+td a:hover {
+    text-decoration: underline;
+    color: #357abd;
+}
+
+/* Document List */
+.document-list {
+    margin: 30px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.document-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.document-list li:hover {
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.document-list li span {
+    color: #333;
+    font-weight: 500;
+    flex-grow: 1;
+    margin-right: 15px;
+}
+
+.document-list li a.download-button {
+    text-decoration: none;
+    padding: 12px 20px;
+    background-color: #4a90e2;
+    color: #fff;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.document-list li a.download-button:hover {
+    background-color: #357ab8;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .admin-panel {
+        width: 85%;
+    }
+}
+
+@media (max-width: 992px) {
+    .admin-panel {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    input[type="text"], input[type="file"], select {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    .document-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px;
+    }
+
+    .document-list li span {
+        margin-bottom: 10px;
+    }
+
+    .document-list li a.download-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-panel {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    input[type="text"], input[type="file"], select {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    .document-list li {
+        padding: 10px;
+    }
+
+    .modal-content {
+        max-width: 90%;
+        margin: 50px auto;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .admin-panel {
+        width: 100%;
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    input[type="text"], input[type="file"], select {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 8px 14px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    .document-list li {
+        padding: 10px;
+    }
+
+    .modal-content {
+        max-width: 90%;
+        margin: 50px auto;
+        padding: 15px;
+    }
+}
+
+/* Back Link */
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #4a90e2;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+    color: #357ab8;
+}
+
+/* Modal Styles */
+.modal-content {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 25px;
+    max-width: 500px;
+    margin: 100px auto;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.modal-content:hover {
+    transform: scale(1.02);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #4a90e2;
+}
+
+/* Modal Background */
+#editFileModal, #editCategoryModal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    transition: opacity 0.3s;
+}
+
+/* Form Layout in Modal */
+#editFileForm, #editCategoryForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#editFileForm input[type="text"], #editFileForm input[type="file"], 
+#editCategoryForm input[type="text"] {
+    margin-bottom: 12px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#editFileForm input[type="text"]:focus, #editFileForm input[type="file"]:focus, 
+#editCategoryForm input[type="text"]:focus {
+    border-color: #4a90e2;
+    outline: none;
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.5);
+}
